@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{%set mem = members | random%}
+{%set im = mem["im"]%}
+{%set jobs = mem["jobs"] | sort%}
+{%set jobs = jobs|join(', ')%}
+<h1 align="center">{{mem["name"]}} {{mem["surname"]}}</h1>
+<center>
+    <img width=600 height=600 src="{{ url_for('static', filename=im) }}">
+</center>
+<h3 align="center">{{jobs}}</h3>
+{%endblock%}
