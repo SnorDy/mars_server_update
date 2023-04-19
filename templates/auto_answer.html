@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"/>
+<p style="font-size:20pt" align='left'>Фамилия: {{surname}}</p>
+<p style="font-size:20pt">Имя: {{name}}</p>
+<p style="font-size:20pt">Образование: {{education}}</p>
+<p style="font-size:20pt">Профессия: {{prof}}</p>
+<p style="font-size:20pt">Пол: {{sex}}</p>
+<p style="font-size:20pt">Мотивация: {{motivation}}</p>
+<p style="font-size:20pt">Готовы остаться на Марсе? {{ready_or_not}}</p>
+
+{%endblock%}
